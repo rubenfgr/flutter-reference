@@ -1,7 +1,6 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:miscelaneos/helpers/get_turns_by_degrees.dart';
 import 'package:miscelaneos/presentation/providers/compass/compass_provider.dart';
 import 'package:miscelaneos/presentation/providers/permissions/permissions_provider.dart';
 import 'package:miscelaneos/presentation/screens/permissions/ask_location_screen.dart';
@@ -49,15 +48,21 @@ class Compass extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('$heading°', style: const TextStyle(fontSize: 30, color: Colors.white)),
+        Text('$heading°',
+            style: const TextStyle(fontSize: 30, color: Colors.white)),
         const SizedBox(height: 20),
         Stack(
           alignment: Alignment.center,
           children: [
             Image.asset('assets/images/quadrant-1.png'),
-            Transform.rotate(
-                angle: -heading * (math.pi / 180),
-                child: Image.asset('assets/images/needle-1.png')),
+            // Transform.rotate(
+            //     angle: -heading * (math.pi / 180),
+            //     child: Image.asset('assets/images/needle-1.png')),
+            AnimatedRotation(
+                turns: getTurnsByDegrees(heading.toDouble()),
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.linear,
+                child: Image.asset('assets/images/needle-1.png'))
           ],
         ),
       ],
