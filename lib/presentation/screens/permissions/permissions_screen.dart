@@ -18,7 +18,7 @@ class PermissionsScreen extends StatelessWidget {
 }
 
 class _PermissionsView extends ConsumerWidget {
-  const _PermissionsView({super.key});
+  const _PermissionsView();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -80,7 +80,7 @@ class _PermissionsView extends ConsumerWidget {
           padding: const EdgeInsets.all(16),
           child: ElevatedButton(
               onPressed: () => openAppSettings(),
-              child: Text('Abrir configuración')),
+              child: const Text('Abrir configuración')),
         ),
       ],
     );

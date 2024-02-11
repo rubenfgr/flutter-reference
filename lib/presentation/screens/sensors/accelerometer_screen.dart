@@ -26,14 +26,14 @@ class AccelerometerScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Acelerómetro', style: TextStyle(fontSize: 20)),
+                const Text('Acelerómetro', style: TextStyle(fontSize: 20)),
                 Text('x: ${v.x.toStringAsFixed(2)}'),
                 const SizedBox(height: 20),
                 Text('y: ${v.y.toStringAsFixed(2)}'),
                 const SizedBox(height: 20),
                 Text('z: ${v.z.toStringAsFixed(2)}'),
                 const SizedBox(height: 20),
-                Text('Acelerómetro Usuario', style: TextStyle(fontSize: 20)),
+                const Text('Acelerómetro Usuario', style: TextStyle(fontSize: 20)),
                 userAccelerometerXYZ.when(
                   data: (v) => Column(
                     mainAxisSize: MainAxisSize.max,
@@ -48,12 +48,12 @@ class AccelerometerScreen extends ConsumerWidget {
                     ],
                   ),
                   error: (error, stack) => Text('Error: $error'),
-                  loading: () => CircularProgressIndicator(),
+                  loading: () => const CircularProgressIndicator(),
                 ),
               ],
             ),
             error: (error, stack) => Text('Error: $error'),
-            loading: () => CircularProgressIndicator(),
+            loading: () => const CircularProgressIndicator(),
           )
         ],
       )),

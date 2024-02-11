@@ -49,7 +49,7 @@ class Compass extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('$heading°', style: TextStyle(fontSize: 30, color: Colors.white)),
+        Text('$heading°', style: const TextStyle(fontSize: 30, color: Colors.white)),
         const SizedBox(height: 20),
         Stack(
           alignment: Alignment.center,
