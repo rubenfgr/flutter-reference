@@ -40,4 +40,19 @@ final router = GoRouter(
         path: '/compass',
         builder: (context, state) => const CompassScreen(),
       ),
+      GoRoute(
+        path: '/pokemons',
+        builder: (context, state) => const PokemonsScreen(),
+        routes: [
+          GoRoute(
+            path: ':id',
+            builder: (context, state) =>
+                PokemonScreen(id: state.pathParameters['id']!),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: '/biometricos',
+        builder: (context, state) => const BiometricsScreen(),
+      ),
     ]);
