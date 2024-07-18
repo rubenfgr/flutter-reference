@@ -1,4 +1,4 @@
-package com.rubenfgr.study.miscelaneos
+package com.rubenfgr.flutter_reference
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 

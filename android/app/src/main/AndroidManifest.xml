@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rubenfgr.study.miscelaneos">
+    package="com.rubenfgr.flutter_reference">
 
     <!--
     Internet permissions do not affect the `permission_handler` plugin, but are required if your app
@@ -83,7 +83,7 @@
     <!-- Permissions options for the `system alert windows` group -->
     <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
 
-    <!-- Permissions options for the `request install packages` group -->
+    <!-- Permissions options for the `request install package="com.rubenfgr.flutter_reference"> -->
     <!-- <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> -->
 
     <!-- Permissions options for the `access notification policy` group -->
@@ -102,6 +102,10 @@
         android:label="miscelaneos"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAY84tJclKSE3aqY-Sqy18hqPpA-VeBq8w" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
